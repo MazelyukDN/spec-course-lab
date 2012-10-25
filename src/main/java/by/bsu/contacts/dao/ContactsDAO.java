@@ -51,9 +51,9 @@ public class ContactsDAO {
         return true;
     }
 
-    public boolean delete(int id){
+    public boolean delete(Contact contact){
         for(int i = 0; i < contacts.size(); i++){
-            if (contacts.get(i).getId() == id){
+            if (contacts.get(i).getId() == contact.getId()){
                 contacts.remove(i);
                 return true;
             }

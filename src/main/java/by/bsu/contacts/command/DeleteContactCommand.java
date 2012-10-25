@@ -11,9 +11,9 @@ public class DeleteContactCommand implements Command {
 
     @Override
     public void execute(Request request, Response response) throws IOException {
-        ContactsDAO dao = ContactsDAO.getInstance();
         int id = Integer.parseInt(request.getParameter("id"));
-        dao.delete(id);
+        Contact contact = new Contact(id);
+        Contact.delete(contact);
         response.sendInAppRedirect("/");
     }
 }

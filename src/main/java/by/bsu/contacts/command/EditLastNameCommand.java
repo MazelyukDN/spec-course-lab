@@ -3,6 +3,7 @@ package by.bsu.contacts.command;
 import by.bsu.contacts.controller.Request;
 import by.bsu.contacts.controller.Response;
 import by.bsu.contacts.dao.ContactsDAO;
+import by.bsu.contacts.dao.DataAccessException;
 import by.bsu.contacts.domain.Contact;
 import by.bsu.contacts.xslt.XsltHelper;
 import org.w3c.dom.Document;
@@ -18,10 +19,14 @@ public class EditLastNameCommand implements Command {
     public void execute(Request request, Response response) throws IOException {
         ContactsDAO dao = ContactsDAO.getInstance();
         int id = Integer.parseInt(request.getParameter("id"));
-        final Contact contact = dao.get(id);
+        final Contact contact = new Contact(id);
         if (request.isPost()) {
-            contact.setLastName(request.getParameter("last_name"));
-            dao.save(contact);
+            try {
+                contact.setLastName(request.getParameter("last_name"));
+            } catch (DataAccessException e) {
+                e.printStackTrace();
+                response.sendInAppRedirect("/error");
+            }
             response.sendInAppRedirect("/edit_phone?id=" + request.getParameter("id"));
         } else {
             List<Contact> list = new ArrayList<Contact>(){{ add(contact); }};

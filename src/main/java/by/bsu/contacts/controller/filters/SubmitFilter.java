@@ -29,8 +29,9 @@ public class SubmitFilter implements IFilter {
             response.sendInAppRedirect("/error");
             return false;
         }
-
-        session.setAttribute("reqId", ++c);
+        if (request.isPost()){
+            session.setAttribute("reqId", ++c);
+        }
 
         if (innerFilter != null) {
             return innerFilter.doFilter(request, response);
