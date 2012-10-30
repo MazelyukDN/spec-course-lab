@@ -3,8 +3,6 @@ package by.bsu.contacts.controller.filters;
 import by.bsu.contacts.controller.Request;
 import by.bsu.contacts.controller.Response;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 

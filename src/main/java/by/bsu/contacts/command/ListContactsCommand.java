@@ -9,7 +9,7 @@ import org.w3c.dom.Document;
 import java.io.IOException;
 
 public class ListContactsCommand implements Command {
-    private static String XSLT_VIEW = "/xslt/contacts.xsl";
+    private static final String XSLT_VIEW = "/xslt/contacts.xsl";
 
     @Override
     public void execute(Request request, Response response) throws IOException {

@@ -2,7 +2,6 @@ package by.bsu.contacts.command;
 
 import by.bsu.contacts.controller.Request;
 import by.bsu.contacts.controller.Response;
-import by.bsu.contacts.dao.ContactsDAO;
 import by.bsu.contacts.domain.Contact;
 
 import java.io.IOException;

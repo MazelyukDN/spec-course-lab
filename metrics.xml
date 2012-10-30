@@ -1,0 +1,47 @@
+<METRICS  profile = "Martin packaging metrics" timestamp = "Wed, 31 Oct 2012 01:37:06 EET">
+		<METRIC category = "Package" name= "Distance to main sequence" abbreviation= "D">
+			<VALUE measured = "by.bsu.contacts.command" value = "0.028846153846153855"/>
+			<VALUE measured = "by.bsu.contacts.dao" value = "0.631578947368421"/>
+			<VALUE measured = "by.bsu.contacts.controller" value = "0.3776041666666667"/>
+			<VALUE measured = "by.bsu.contacts.controller.filters" value = "0.19344262295081965"/>
+			<VALUE measured = "by.bsu.contacts.domain" value = "0.620253164556962"/>
+			<VALUE measured = "by.bsu.contacts.xslt" value = "0.6428571428571428"/>
+			<VALUE measured = "by.bsu.contacts.controller.servlet" value = "0.0"/>
+		</METRIC>
+		<METRIC category = "Package" name= "Abstractness" abbreviation= "A">
+			<VALUE measured = "by.bsu.contacts.command" value = "0.125"/>
+			<VALUE measured = "by.bsu.contacts.dao" value = "0.0"/>
+			<VALUE measured = "by.bsu.contacts.controller" value = "0.3333333333333333"/>
+			<VALUE measured = "by.bsu.contacts.controller.filters" value = "0.2"/>
+			<VALUE measured = "by.bsu.contacts.domain" value = "0.0"/>
+			<VALUE measured = "by.bsu.contacts.xslt" value = "0.0"/>
+			<VALUE measured = "by.bsu.contacts.controller.servlet" value = "0.0"/>
+		</METRIC>
+		<METRIC category = "Package" name= "Efferent coupling" abbreviation= "Cef">
+			<VALUE measured = "by.bsu.contacts.command" value = "99.0"/>
+			<VALUE measured = "by.bsu.contacts.dao" value = "28.0"/>
+			<VALUE measured = "by.bsu.contacts.controller" value = "37.0"/>
+			<VALUE measured = "by.bsu.contacts.controller.filters" value = "37.0"/>
+			<VALUE measured = "by.bsu.contacts.domain" value = "30.0"/>
+			<VALUE measured = "by.bsu.contacts.xslt" value = "10.0"/>
+			<VALUE measured = "by.bsu.contacts.controller.servlet" value = "10.0"/>
+		</METRIC>
+		<METRIC category = "Package" name= "Afferent coupling" abbreviation= "Caf">
+			<VALUE measured = "by.bsu.contacts.command" value = "18.0"/>
+			<VALUE measured = "by.bsu.contacts.dao" value = "48.0"/>
+			<VALUE measured = "by.bsu.contacts.controller" value = "91.0"/>
+			<VALUE measured = "by.bsu.contacts.controller.filters" value = "24.0"/>
+			<VALUE measured = "by.bsu.contacts.domain" value = "49.0"/>
+			<VALUE measured = "by.bsu.contacts.xslt" value = "18.0"/>
+			<VALUE measured = "by.bsu.contacts.controller.servlet" value = "0.0"/>
+		</METRIC>
+		<METRIC category = "Package" name= "Instability" abbreviation= "I">
+			<VALUE measured = "by.bsu.contacts.command" value = "0.8461538461538461"/>
+			<VALUE measured = "by.bsu.contacts.dao" value = "0.3684210526315789"/>
+			<VALUE measured = "by.bsu.contacts.controller" value = "0.2890625"/>
+			<VALUE measured = "by.bsu.contacts.controller.filters" value = "0.6065573770491803"/>
+			<VALUE measured = "by.bsu.contacts.domain" value = "0.379746835443038"/>
+			<VALUE measured = "by.bsu.contacts.xslt" value = "0.35714285714285715"/>
+			<VALUE measured = "by.bsu.contacts.controller.servlet" value = "1.0"/>
+		</METRIC>
+</METRICS>

@@ -21,7 +21,7 @@ public class HttpRequest implements Request{
         return request.getMethod();
     }
 
-    public static String POST = "POST";
+    private static final String POST = "POST";
     @Override
     public boolean isPost() {
         return POST.equalsIgnoreCase(getMethod());
@@ -40,8 +40,8 @@ public class HttpRequest implements Request{
     @Override
     public String getCommandName() {
         String uri = request.getRequestURI();
-        int last = uri.lastIndexOf("/");
-        String commandName = last > 0 ? uri.substring(uri.indexOf("/") + 1, last) : uri.substring(uri.indexOf("/") + 1);
+        int last = uri.lastIndexOf('/');
+        String commandName = last > 0 ? uri.substring(uri.indexOf('/') + 1, last) : uri.substring(uri.indexOf('/') + 1);
         return (commandName == null || commandName.length() == 0) ? "list" : commandName;
     }
 

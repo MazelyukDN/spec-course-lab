@@ -7,7 +7,7 @@ import by.bsu.contacts.xslt.XsltHelper;
 import java.io.IOException;
 
 public class ErrorCommand implements Command {
-    private static String XSLT_VIEW = "/xslt/error.xsl";
+    private static final String XSLT_VIEW = "/xslt/error.xsl";
 
     @Override
     public void execute(Request request, Response response) throws IOException {

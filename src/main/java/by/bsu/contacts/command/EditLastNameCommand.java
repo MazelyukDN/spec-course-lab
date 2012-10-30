@@ -2,7 +2,6 @@ package by.bsu.contacts.command;
 
 import by.bsu.contacts.controller.Request;
 import by.bsu.contacts.controller.Response;
-import by.bsu.contacts.dao.ContactsDAO;
 import by.bsu.contacts.dao.DataAccessException;
 import by.bsu.contacts.domain.Contact;
 import by.bsu.contacts.xslt.XsltHelper;
@@ -13,11 +12,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class EditLastNameCommand implements Command {
-    private static String XSLT_VIEW = "/xslt/edit_last_name.xsl";
+    private static final String XSLT_VIEW = "/xslt/edit_last_name.xsl";
 
     @Override
     public void execute(Request request, Response response) throws IOException {
-        ContactsDAO dao = ContactsDAO.getInstance();
         int id = Integer.parseInt(request.getParameter("id"));
         final Contact contact = new Contact(id);
         if (request.isPost()) {

@@ -13,6 +13,7 @@ import java.io.PrintWriter;
 import java.util.List;
 
 public class XsltHelper {
+    private XsltHelper() {}
     public static void transform(Document doc, String xsltFilename, PrintWriter output) {
         try {
             AppHelper appHelper = AppHelper.getInstance();

@@ -26,7 +26,9 @@ public class UnitOfWork {
     }
 
     public void registerRemoved(Contact obj) {
-        if (newObjects.remove(obj)) return;
+        if (newObjects.remove(obj)) {
+            return;
+        }
         dirtyObjects.remove(obj);
         if (!removedObjects.contains(obj)) {
             removedObjects.add(obj);
