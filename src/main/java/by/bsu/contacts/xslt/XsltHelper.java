@@ -28,7 +28,7 @@ public class XsltHelper {
         }
     }
 
-    public static Document buildContactsXml(List<Contact> contacts, String reqId) {
+    public static Document buildContactsXml(List<Contact> contacts, String reqId, Integer currentPage, Integer totalPages) {
         Document doc = null;
         try {
             doc = DocumentBuilderFactory.newInstance().newDocumentBuilder().newDocument();
@@ -41,15 +41,26 @@ public class XsltHelper {
             rootElem.appendChild(requestElem);
 
             Element contactsList = doc.createElement("contacts");
+            if (currentPage != null) {
+                contactsList.setAttribute("page", currentPage.toString());
+            }
+            if (totalPages != null) {
+                contactsList.setAttribute("pages_count", totalPages.toString());
+            }
             rootElem.appendChild(contactsList);
 
             for (Contact contact : contacts) {
                 contactsList.appendChild(buildContactElement(doc, contact));
             }
+
         } catch (ParserConfigurationException pce) {
             pce.printStackTrace();
         }
         return doc;
+    }
+
+    public static Document buildContactsXml(List<Contact> contacts, String reqId) {
+        return buildContactsXml(contacts, reqId, null, null);
     }
 
     private static Element buildContactElement(Document doc, Contact contact){

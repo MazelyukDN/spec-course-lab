@@ -3,6 +3,7 @@ package by.bsu.contacts.controller;
 import by.bsu.contacts.command.*;
 import by.bsu.contacts.controller.filters.*;
 import by.bsu.contacts.dao.UnitOfWork;
+import by.bsu.contacts.valuelisthandler.IteratorException;
 
 import java.io.IOException;
 import java.util.HashMap;
@@ -34,7 +35,11 @@ public class FrontController {
             Command command = commandMap.get(request.getCommandName());
             if (command != null) {
                 try {
-                    command.execute(request, response);
+                    try {
+                        command.execute(request, response);
+                    } catch (IteratorException e) {
+                        e.printStackTrace();
+                    }
                 } catch (IOException e){
                     e.printStackTrace();
                     response.sendInAppRedirect("/error");
